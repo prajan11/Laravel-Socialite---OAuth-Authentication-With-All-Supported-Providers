@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Laravel-Socialite---All-Providers-Complete-Implementation 
 
-## About Laravel
+### Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Welcome aboard fellow developers, this is where you will one-stop solution to all the problems or issues that you may be facing while implementing the user authentication using OAuth providers supported by Laravel Socialite. And, here I am talking about all the seven supported OAuth providers i.e. Facebook, Google, Twitter, LinkedIn, GitHub, GitLab and Bitbucket
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Demo
+<img src="https://github.com/prajan11/Laravel-Socialite---OAuth-Authentication-With-All-Supported-Providers/blob/main/LoginUI.png" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<a name="requirements"></a>
+## Requirements
 
-## Learning Laravel
+This project is developed in Laravel 9.19 and uses php version 8.0.2. So, please make sure that you have php as well as Laravel with either same or higher version. Also, make sure that your machine has latest version of node and npm installed. For the rest, please refer to composer.json file and make sure to meet the versions of dependencies listed. 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<a name="installation"></a>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+For running this project on your local machine, please follow following steps:
+1. Clone this repository (You can use HTTPS or SSH)
+    ```sh
+    git clone https://github.com/prajan11/Laravel-Socialite---OAuth-Authentication-With-All-Supported-Providers.git
+    ```
 
-## Laravel Sponsors
+1. Please open the project and make sure you are in the root directory
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Copy .env.example file to .env file
+    ```sh
+    cp .env.example .env
+    ```
+1. Create database with any name you fancy and update it in .env file accordingly 
 
-### Premium Partners
+1. Install PHP dependencies using composer install command
+    ```sh
+    composer install
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+1. Generate application key using artisan command as below 
+    ```sh
+    php artisan key:generate
+    ```
 
-## Contributing
+1. Since we are using Laravel Breeze in this project for authentication features provided by Laravel, we have to install as well as compile front-end dependencies as below 
+    ```sh
+    npm install && npm run dev
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Execute migrate Artisan command to run all the migrations
+    ```
+    php artisan migrate
+    ```
 
-## Code of Conduct
+1. Execute serve Artisan command to run Laravel's local development server 
+    ```sh
+    php artisan serve
+    ```  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Visit `http://127.0.0.1:8000/` in your browser to finally view the project.     
 
-## Security Vulnerabilities
+1. Click on "Log in" button or visit `http://127.0.0.1:8000/login` in your browser to view the login page.  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+ > You have run the project. But, trust me, you have lots to do ahead. Coding is not that difficult. But, generating the required client id and client secret from the OAuth providers can be quite tricky. I have implemented authentication using all of the seven OAuth providers supported by Laravel Socialite and I believe that I can surely be of some help to you. If you have any issues, please feel free to contact me. Also, I will try to write step-by-step process for each of the OAuth providers in the future. 
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+
+
+
