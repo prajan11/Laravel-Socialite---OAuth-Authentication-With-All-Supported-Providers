@@ -45,45 +45,52 @@
 
         </div>
 
-        <span class="flex justify-center w-full mt-2 text-gray-500"> - OR -</span>
-
-        <div class="flex flex-col w-full mt-4 space-y-2">
-
-            <x-social-login-button class="bg-blue-700 hover:bg-blue-600" href="{{ route('socialite.redirect','facebook') }}">
-                <i class="fa-brands fa-facebook"></i>
-                <span>Login With Facebook</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-red-700 hover:bg-red-600" href="{{ route('socialite.redirect','google') }}">
-                <i class="fa-brands fa-google"></i>
-                <span>Login With Google</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-gray-800 hover:bg-gray-700" href="{{ route('socialite.redirect','github') }}">
-                <i class="fa-brands fa-github"></i>
-                <span>Login With GitHub</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-orange-600 hover:bg-orange-500" href="{{ route('socialite.redirect','gitlab') }}">
-                <i class="fa-brands fa-gitlab"></i>
-                <span>Login With GitLab</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-sky-600 hover:bg-sky-500" href="{{ route('socialite.redirect','twitter') }}">
-                <i class="fa-brands fa-twitter"></i>
-                <span>Login With Twitter</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-cyan-700 hover:bg-cyan-600" href="{{ route('socialite.redirect','linkedin') }}">
-                <i class="fa-brands fa-linkedin-in"></i>
-                <span>Login With LinkedIn</span>
-            </x-social-login-button>
-
-            <x-social-login-button class="bg-blue-800 hover:bg-blue-700" href="{{ route('socialite.redirect','bitbucket') }}">
-                <i class="fa-brands fa-bitbucket"></i>
-                <span>Login With BitBucket</span>
-            </x-social-login-button>
-
-        </div>
     </form>
+
+    <span class="flex justify-center w-full mt-2 text-gray-500"> - OR -</span>
+
+    <div class="flex flex-col w-full mt-4 space-y-2">
+
+        <x-social-login-button class="bg-blue-700 hover:bg-blue-600" href="{{ route('socialite.redirect','facebook') }}">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Login With Facebook</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-red-700 hover:bg-red-600" href="{{ route('socialite.redirect','google') }}">
+            <i class="fa-brands fa-google"></i>
+            <span>Login With Google</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-gray-800 hover:bg-gray-700" href="{{ route('socialite.redirect','github') }}">
+            <i class="fa-brands fa-github"></i>
+            <span>Login With GitHub</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-orange-600 hover:bg-orange-500" href="{{ route('socialite.redirect','gitlab') }}">
+            <i class="fa-brands fa-gitlab"></i>
+            <span>Login With GitLab</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-sky-600 hover:bg-sky-500" href="{{ route('socialite.redirect','twitter') }}">
+            <i class="fa-brands fa-twitter"></i>
+            <span>Login With Twitter</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-cyan-700 hover:bg-cyan-600" href="{{ route('socialite.redirect','linkedin') }}">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>Login With LinkedIn</span>
+        </x-social-login-button>
+
+        <x-social-login-button class="bg-blue-800 hover:bg-blue-700" href="{{ route('socialite.redirect','bitbucket') }}">
+            <i class="fa-brands fa-bitbucket"></i>
+            <span>Login With BitBucket</span>
+        </x-social-login-button>
+
+        <div class="pt-2 text-center text-black registerContainer">
+            Not registered yet? <a href="{{ route('register') }}" class="ml-2 text-sm font-black text-gray-700 underline dark:text-gray-500">Register</a> Here
+        </div>
+
+    </div>
+
+
 </x-guest-layout>

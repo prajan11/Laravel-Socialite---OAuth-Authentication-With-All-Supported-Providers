@@ -65,11 +65,10 @@ class SocialMediaLoginController extends Controller
 
             Auth::login($new_user);
 
-
         }
 
         //redirect the user to the dashboard.
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard',['provider'=>$providerName]);
 
 
     }

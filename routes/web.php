@@ -18,10 +18,11 @@ use App\Http\Controllers\SocialMediaLoginController;
 
 Route::get('/', function (Request $request) {
     return view('welcome');
-});
+})->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard', function (Request $request) {
+    $provider = $request->query('provider') ?? "" ;
+    return view('dashboard',['provider' => $provider]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
